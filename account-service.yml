@@ -1,0 +1,32 @@
+security:
+  oauth2:
+    client:
+      clientId: account-service
+      clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
+      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/${POSTGRES_DB:piggymetrics}
+    driverClassName: org.postgresql.Driver
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc.lob.non_contextual_creation: true
+        hbm2ddl.auto: validate # none, create, create-drop, validate
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  servlet:
+    context-path: /accounts
+  port: 6000
+
+feign:
+  hystrix:
+    enabled: true
