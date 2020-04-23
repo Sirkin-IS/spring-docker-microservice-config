@@ -14,8 +14,3 @@ server:
 
 crypto:
   password-pepper: ${PASSWORD_PEPPER:default_peper_from_config}
-
-test-config-params:
-  string-param: this is test string from git config repository
-  integer-param: 10000
-  boolean-param: false
