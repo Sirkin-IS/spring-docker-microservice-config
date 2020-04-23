@@ -17,5 +17,5 @@ crypto:
 
 test-config-params:
   string-param: this is test string from git config repository
-  integer-param: 10000;
-  boolean-param: false;
+  integer-param: 10000
+  boolean-param: false
