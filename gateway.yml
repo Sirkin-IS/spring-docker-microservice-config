@@ -46,5 +46,5 @@ server:
 
 test-config-params:
   string-param: this is test string from git config repository
-  integer-param: 10003
+  integer-param: 10004
   boolean-param: false
