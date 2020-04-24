@@ -28,3 +28,8 @@ spring:
     port: 5672
     username: guest
     password: guest
+
+test-config-params-app:
+  string-param: this is test string from git config repository
+  integer-param: 10000
+  boolean-param: false
