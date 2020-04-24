@@ -31,5 +31,5 @@ spring:
 
 test-config-params-app:
   string-param: this is test string from git config repository
-  integer-param: 10002
+  integer-param: 10003
   boolean-param: false
